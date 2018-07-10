@@ -173,7 +173,7 @@ open class LMDFloatingLabelTextField: UITextField {
         self.tintColor = themeColor
         self.lmd_placeholder.font = self.placeholderFont
         self.lmd_placeholder.textColor = self.placeholderTextColor
-        self.lmd_placeholder.text = self.placeholderText?
+        self.lmd_placeholder.text = self.placeholderText
         self.textColor = self.disabled ? self.disabledTextColor : self.textFieldTextColor
         self.backgroundColor = self.disabled ? self.disabledBackgroundColor : self.enabledBackgroundColor
         self.layer.borderColor = self.error ? self.errorBorderColor?.cgColor : self.lmd_state == .editing ?
