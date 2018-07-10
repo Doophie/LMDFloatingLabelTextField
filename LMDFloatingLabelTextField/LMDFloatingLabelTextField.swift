@@ -155,7 +155,7 @@ open class LMDFloatingLabelTextField: UITextField {
     }
     
     fileprivate func calculateEditingConstraints() {
-        let attributedStringPlaceholder = NSAttributedString(string: (self.placeholderText ?? "").uppercased(), attributes: [
+        let attributedStringPlaceholder = NSAttributedString(string: (self.placeholderText ?? ""), attributes: [
             NSAttributedStringKey.font : self.placeholderFont
             ])
         let originalWidth = attributedStringPlaceholder.boundingRect(with: CGSize(width: .greatestFiniteMagnitude, height: self.frame.height), options: [], context: nil).width
@@ -173,7 +173,7 @@ open class LMDFloatingLabelTextField: UITextField {
         self.tintColor = themeColor
         self.lmd_placeholder.font = self.placeholderFont
         self.lmd_placeholder.textColor = self.placeholderTextColor
-        self.lmd_placeholder.text = self.placeholderText?.uppercased()
+        self.lmd_placeholder.text = self.placeholderText?
         self.textColor = self.disabled ? self.disabledTextColor : self.textFieldTextColor
         self.backgroundColor = self.disabled ? self.disabledBackgroundColor : self.enabledBackgroundColor
         self.layer.borderColor = self.error ? self.errorBorderColor?.cgColor : self.lmd_state == .editing ?
